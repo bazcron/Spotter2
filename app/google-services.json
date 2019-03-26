@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "278322603139",
+    "firebase_url": "https://spotter-a33a4.firebaseio.com",
+    "project_id": "spotter-a33a4",
+    "storage_bucket": "spotter-a33a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278322603139:android:a826fa3e1a933fb0",
+        "android_client_info": {
+          "package_name": "apps.my.spotter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278322603139-07lv1fl38hj11epg5kapohfbhuqa1jh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apps.my.spotter",
+            "certificate_hash": "1288984ca1b6eec35593b7abf2ed8598ab53ad69"
+          }
+        },
+        {
+          "client_id": "278322603139-ro1je16p52sn8d2b0eokk31bkagsdfao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRYC3MkrzHDgaohyY81Uw-jOFXrF0Zmzw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278322603139-ro1je16p52sn8d2b0eokk31bkagsdfao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

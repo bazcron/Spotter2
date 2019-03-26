@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities.Help">
+
+
+    <TextView
+        android:id="@+id/textViewHelpInstructions"
+        android:layout_width="429dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorGrey"
+        android:text="How to Use Spotter."
+        android:textAlignment="center"
+
+        android:textColor="@color/colorFontWhite"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="547dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHelpInstructions"
+        app:layout_constraintVertical_bias="0.0">
+        <!-- Here you put the rest of your current view-->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/helpscreen"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHelpInstructions"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editTownCitylbl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities.EditIssues">
+
+    <TextView
+        android:id="@+id/editRoadName"
+        android:layout_width="192dp"
+        android:layout_height="35dp"
+        android:paddingTop="10dp"
+        android:text="@string/locationLbl"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editRoadLbl"
+        app:layout_constraintTop_toBottomOf="@+id/editTownCity" />
+
+    <TextView
+        android:id="@+id/editCountyName"
+        android:layout_width="192dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="County Name"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNameOfIssue" />
+
+    <TextView
+        android:id="@+id/editCountyLbl"
+        android:layout_width="110sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/countyLbl"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIssueLbl" />
+
+    <TextView
+        android:id="@+id/levelOfDangerLbl"
+        android:layout_width="391dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        android:text="Has this Issue become Better or Worse?"
+        android:textAlignment="center"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRatingBar" />
+
+
+    <TextView
+        android:id="@+id/editUpdateInfoLbl"
+        android:layout_width="110sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+
+        android:paddingTop="10dp"
+        android:text="@string/updatedInfoLbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRoadLbl" />
+
+    <TextView
+        android:id="@+id/editRoadLbl"
+        android:layout_width="110sp"
+        android:layout_height="35sp"
+
+        android:paddingTop="10dp"
+        android:text="@string/locationLbl"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTownCityLbl" />
+
+
+    <RatingBar
+        android:id="@+id/editRatingBar"
+        style="@style/ImageRatingBar"
+        android:layout_width="245dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="90dp"
+        android:numStars="10"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInfo" />
+
+    <Button
+        android:id="@+id/addIssueBtn"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorGreyLighter"
+        android:onClick="saveIssue"
+        android:text="@string/saveUpdate"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988" />
+
+    <EditText
+        android:id="@+id/editInfo"
+        android:layout_width="297sp"
+        android:layout_height="95sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRoadName" />
+
+    <TextView
+        android:id="@+id/editIssueLbl"
+        android:layout_width="110sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/issuelbl"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <TextView
+        android:id="@+id/editNameOfIssue"
+        android:layout_width="192dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="Name Of Issue"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTownCityLbl"
+        android:layout_width="110sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="60dp"
+        android:text="Town/City"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCountyLbl" />
+
+    <TextView
+        android:id="@+id/editTownCity"
+        android:layout_width="192dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:text="Town/City"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textTownCityLbl"
+        app:layout_constraintTop_toBottomOf="@+id/editCountyName" />
+
+</android.support.constraint.ConstraintLayout>

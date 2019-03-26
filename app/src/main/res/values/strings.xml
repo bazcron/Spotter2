@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Spotter</string>
+    <string name="appHelp">This is the help screen for Spotter</string>
+    <string name="appHelpExtra">If you see an issue in your local area, enter the details and rate the issue on level of importance.</string>
+    <string name="appDisplayName">Spotter</string>
+    <string name="appDesc">Spotter allows users to highlight issues and give a level of how important the issue is.</string>
+    <string name="appMoreInfo">For Information on how to use this App please see the Help page.</string>
+    <string name="appAbout">About Spotter</string>
+    <string name="appWebsite">No Current Website</string>
+    <string name="developer">Developed by Barry Cronin</string>
+
+    <string name="searchIssuesLbl">Search Issues</string>
+    <string name="mostImportantIssueLbl">Most Dangerous</string>
+    <string name="addAIssueLbl">Add a Issue</string>
+    <string name="addIssueBtnLbl">Add Issue</string>
+    <string name="saveCoffeeBtn">Save Issue</string>
+    <string name="recentlyViewedLbl">--- Issues ---</string>
+    <string name="locationLbl">Road</string>
+    <string name="infoLbl">Info :</string>
+    <string name="issueRatingLbl">How Bad is this Issue?</string>
+    <string name="issueDetailsLbl">Issue Details</string>
+    <string name="informationLbl">Information</string>
+    <string name="emptyMessageLbl">You have no Issues added.</string>
+    <string name="filterTxt">Filter Issues...</string>
+    <string name="saveUpdate">Save Update</string>
+    <string name="updatedInfoLbl">Update Info</string>
+    <string name="issuelbl">Issue</string>
+    <string name="countyLbl">County</string>
+    <string name="closestTownCityLbl">Town/City</string>
+
+    <array name="county">
+        <item><bold>ALL</bold></item>
+        <item>Antrim</item>
+        <item>Armagh</item>
+        <item>Carlow</item>
+        <item>Cavan</item>
+        <item>Clare</item>
+        <item>Cork</item>
+        <item>Derry</item>
+        <item>Donegal</item>
+        <item>Down</item>
+        <item>Dublin</item>
+        <item>Fermanagh</item>
+        <item>Galway</item>
+        <item>Kerry</item>
+        <item>Kildare</item>
+        <item>Kilkenny</item>
+        <item>Laois</item>
+        <item>Leitrim</item>
+        <item>Limerick</item>
+        <item>Longford</item>
+        <item>Louth</item>
+        <item>Mayo</item>
+        <item>Meath</item>
+        <item>Monaghan</item>
+        <item>Offaly</item>
+        <item>Roscommon</item>
+        <item>Sligo</item>
+        <item>Tipperary</item>
+        <item>Tyrone</item>
+        <item>Waterford</item>
+        <item>Westmeath</item>
+        <item>Wexford</item>
+        <item>Wicklow</item>
+    </array>
+    <array name="issue">
+        <item><bold>ALL</bold></item>
+        <item>Pothole</item>
+        <item>Cracked Pavement</item>
+        <item>Graffiti</item>
+        <item>Illegal Dumping</item>
+    </array>
+    <array name="countyAdd">
+        <item>Antrim</item>
+        <item>Armagh</item>
+        <item>Carlow</item>
+        <item>Cavan</item>
+        <item>Clare</item>
+        <item>Cork</item>
+        <item>Derry</item>
+        <item>Donegal</item>
+        <item>Down</item>
+        <item>Dublin</item>
+        <item>Fermanagh</item>
+        <item>Galway</item>
+        <item>Kerry</item>
+        <item>Kildare</item>
+        <item>Kilkenny</item>
+        <item>Laois</item>
+        <item>Leitrim</item>
+        <item>Limerick</item>
+        <item>Longford</item>
+        <item>Louth</item>
+        <item>Mayo</item>
+        <item>Meath</item>
+        <item>Monaghan</item>
+        <item>Offaly</item>
+        <item>Roscommon</item>
+        <item>Sligo</item>
+        <item>Tipperary</item>
+        <item>Tyrone</item>
+        <item>Waterford</item>
+        <item>Westmeath</item>
+        <item>Wexford</item>
+        <item>Wicklow</item>
+    </array>
+    <array name="issueAdd">
+        <item>Pothole</item>
+        <item>Cracked Pavement</item>
+        <item>Graffiti</item>
+        <item>Illegal Dumping</item>
+        <item>Other Issue</item>
+    </array>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyLightest">
+
+    <ImageView
+        android:id="@+id/rowDeleteImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="fav"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rowIssue"
+        android:layout_width="141dp"
+        android:layout_height="17dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:gravity="center_vertical"
+        android:text="Issue"
+        android:textColor="@color/colorRed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rowCountyName"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_alignLeft="@+id/rowIssue"
+
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:gravity="center_vertical"
+        android:text="County"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textIssueLevel"
+        app:layout_constraintStart_toEndOf="@+id/rowIssue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rowRating"
+        android:layout_width="35dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/rowDeleteImg"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_toLeftOf="@+id/rowDeleteImg"
+        android:gravity="center_vertical"
+        android:text="!!!"
+        android:textAlignment="center"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textIssueLevel" />
+
+    <TextView
+        android:id="@+id/textIssueLevel"
+        android:layout_width="82dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Issue Level"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
