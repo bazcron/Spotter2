@@ -39,6 +39,8 @@ public class Home extends Base {
     Spinner countySpinner, issueSpinner;
     int countyCurrentSelection, issueCurrentSelection;
     boolean firstTime = true;
+    TextView issueQtyMessage;   //used to display info about quantities
+    int allIssues;
    // ListView IssueListView;
    // ArrayAdapter<Issue> IssueAdapter;
 
@@ -59,6 +61,8 @@ public class Home extends Base {
         emptyList = findViewById(R.id.emptyList);
         countySpinner = findViewById(R.id.spinnerCounty);
         issueSpinner = findViewById(R.id.spinnerIssue);
+        issueQtyMessage = findViewById(R.id.textView3);
+
 
         //getting the reference of issue nodes
         myDatabase = FirebaseDatabase.getInstance().getReference("issue");
@@ -69,9 +73,11 @@ public class Home extends Base {
                 ALLissueList.clear();
                 IssueList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    //add to allIssueCount
+                    allIssues++;
                     //getting issue
                     Issue issue = (ds.getValue(Issue.class));
-                    //adding artist to the list
+                    //adding issue to the list
                     Log.d("check",issue.city);
                     ALLissueList.add(issue);
                     IssueList.add(issue);
@@ -177,31 +183,16 @@ public class Home extends Base {
             }
             IssueFragment.listAdapter.notifyDataSetChanged();
             Toast.makeText(this, "SEARCH COMPLETED", Toast.LENGTH_LONG).show();
+
+           String nameOfIssue = issueSpinner.getSelectedItem().toString();
+            if (nameOfIssue.equals("ALL")){
+                issueQtyMessage.setText("ALL Issues ="+allIssues);
+
+            }else{
+                issueQtyMessage.setText(nameOfIssue+"'s ="+count+"  ALL Issues ="+allIssues);
+            }
         }//end of else.........
     }
 
-
-    public void initialIssues(){
-     /*  Issue a = new Issue("Pothole", "Waterford","12 Plymouth Street","Waterford","Info 1",5);
-        Issue b = new Issue("Pothole", "Cork","12 Plymouth Street","Waterford","Info 1",5);
-        Issue c = new Issue("Pothole", "Waterford","12 Plymouth Street","Waterford","Info 1",5);
-     ALLissueList.add(a);
-     ALLissueList.add(b);
-     ALLissueList.add(c);*/
-     //IssueList.add(a);IssueList.add(b);IssueList.add(c);
-
-
-        /*   Issue d = new Issue("Pothole", "Waterford","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue e = new Issue("Pothole", "Cork","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue f = new Issue("Pothole", "Waterford","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue g = new Issue("Pothole", "Wexford","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue h = new Issue("Pothole", "Waterford","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue i = new Issue("Pothole", "Wexford","12 Plymouth Street","Waterford","Info 1",5,true);
-        Issue j = new Issue("Pothole", "Wexford","12 Plymouth Street","Waterford","Info 1",5,true);
-*/
-       //  /* IssueList.add(d);IssueList.add(e);
-       // IssueList.add(f);IssueList.add(g);IssueList.add(h);IssueList.add(i);IssueList.add(j);  */
-
-    }
 }
 

@@ -17,7 +17,7 @@
     <string name="recentlyViewedLbl">--- Issues ---</string>
     <string name="locationLbl">Road</string>
     <string name="infoLbl">Info :</string>
-    <string name="issueRatingLbl">How Bad is this Issue?</string>
+    <string name="issueRatingLbl">How Bad is this Issue for You?</string>
     <string name="issueDetailsLbl">Issue Details</string>
     <string name="informationLbl">Information</string>
     <string name="emptyMessageLbl">You have no Issues added.</string>

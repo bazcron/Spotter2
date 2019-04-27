@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/rowIssue"
         android:layout_width="141dp"
-        android:layout_height="17dp"
+        android:layout_height="25dp"
 
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"

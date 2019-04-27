@@ -19,7 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Map;
 import apps.my.spotter.R;
 import apps.my.spotter.activities.models.Issue;
-
 //*** REF: https://www.simplifiedcoding.net/firebase-realtime-database-crud/   used and adapted code on this page to help incorporate
 //Firebase Database into my project.
 
@@ -27,6 +26,7 @@ public class Add extends Base {
 
     private static final String TAG = "db";
     private String roadName, town, info,county, type, countyText, typeText;
+    private TextView ratingBarValue;
     private EditText roadNameText, townText, infoText;
     private RatingBar ratingBar;
     private int issueLevel;
@@ -66,6 +66,7 @@ public class Add extends Base {
         issueSpinner = findViewById(R.id.spinnerIssue);
         roadNameText = findViewById(R.id.addRoadName);
         townText =  findViewById(R.id.addTown);
+        ratingBarValue = findViewById(R.id.ratingBarValue);
         // ratingBar =  findViewById(R.id.addRatingBar);
         infoText =  findViewById(R.id.addInfo);
 
@@ -75,7 +76,10 @@ public class Add extends Base {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-
+                Float ratingLevelFloat = ratingBar.getRating();
+                int ratingLevel = Math.round(ratingLevelFloat);
+                String ratingLevel2 = Integer.toString(ratingLevel);;
+                ratingBarValue.setText(ratingLevel2);
             }
         });
     }
