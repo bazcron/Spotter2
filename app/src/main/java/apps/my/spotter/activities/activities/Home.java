@@ -193,9 +193,12 @@ public class Home extends Base {
             Toast.makeText(this, "SEARCH COMPLETED", Toast.LENGTH_LONG).show();
 
            String nameOfIssue = issueSpinner.getSelectedItem().toString();
-            if (nameOfIssue.equals("ALL")){
+           String nameOfCounty = countySpinner.getSelectedItem().toString();
+            if (nameOfIssue.equals("ALL") && nameOfCounty.equals("ALL")){
                 issueQtyMessage.setText("ALL Issues ="+allIssues);
 
+            }else if (!nameOfCounty.equals("ALL") && nameOfIssue.equals("ALL")){
+                issueQtyMessage.setText("Issue's ="+count+"  ALL Issues ="+allIssues);
             }else{
                 issueQtyMessage.setText(nameOfIssue+"'s ="+count+"  ALL Issues ="+allIssues);
             }
