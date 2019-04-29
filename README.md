@@ -33,3 +33,12 @@ Info shows some basic information on the app. Also at the top of the screen is a
 
 Updates since Part 1 (Spotter)
 
+Persistence:
+
+Added Firebase database to the application, to give online persistence.
+
+CRUD functionality. App now has persistence and is now able to Create, Read, Update and Delete Issues.
+
+Added a Visual display which counts the total number of issues and the filtered number of issues.
+
+Added a number to the right of the custom made rating bar, to give a better visual clue to the value being selected.
