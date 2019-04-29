@@ -41,7 +41,8 @@ public class Home extends Base {
     int countyCurrentSelection, issueCurrentSelection;
     boolean firstTime = true;
     TextView issueQtyMessage;   //used to display info about quantities
-    int allIssues;
+    int allIssues=0;
+    int count=0;
     ProgressBar progressBar;
    // ListView IssueListView;
    // ArrayAdapter<Issue> IssueAdapter;
@@ -72,6 +73,7 @@ public class Home extends Base {
         myDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                allIssues=0;
                 ALLissueList.clear();
                 IssueList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
@@ -130,6 +132,7 @@ public class Home extends Base {
     @Override
     protected void onStart() {
         super.onStart();
+        count=0;
         filterIssues(0);
 
     }
@@ -142,6 +145,7 @@ public class Home extends Base {
     @Override
     protected void onResume() {
         super.onResume();
+        count=0;
         Log.v("Issuemate","Home : " + IssueList);
 
         issueFragment = IssueFragment.newInstance(); //get a new Fragment instance
@@ -156,12 +160,12 @@ public class Home extends Base {
 
     //filters issue on county, issue
     private void filterIssues(int currentPosition){
-
+    count=0;
        if (firstTime){
             //do nothing...
         }else {
           // progressBar.setVisibility(View.VISIBLE);
-            int count = 0;
+          count = 0;
             IssueList.clear();   //clears all issues from issueList
             //gets selected strings for county and issue
             countyPicked = countySpinner.getSelectedItem().toString();
