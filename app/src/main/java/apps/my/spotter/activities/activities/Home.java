@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ public class Home extends Base {
     boolean firstTime = true;
     TextView issueQtyMessage;   //used to display info about quantities
     int allIssues;
+    ProgressBar progressBar;
    // ListView IssueListView;
    // ArrayAdapter<Issue> IssueAdapter;
 
@@ -154,9 +156,11 @@ public class Home extends Base {
 
     //filters issue on county, issue
     private void filterIssues(int currentPosition){
+
        if (firstTime){
             //do nothing...
         }else {
+          // progressBar.setVisibility(View.VISIBLE);
             int count = 0;
             IssueList.clear();   //clears all issues from issueList
             //gets selected strings for county and issue
@@ -191,7 +195,9 @@ public class Home extends Base {
             }else{
                 issueQtyMessage.setText(nameOfIssue+"'s ="+count+"  ALL Issues ="+allIssues);
             }
+          // progressBar.setVisibility(View.GONE);
         }//end of else.........
+      // progressBar.setVisibility(View.GONE);
     }
 
 }

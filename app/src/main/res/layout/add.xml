@@ -236,6 +236,7 @@
         android:layout_marginBottom="8dp"
         android:text="0"
         android:textAlignment="textStart"
+        android:textColor="@color/colorRed"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
