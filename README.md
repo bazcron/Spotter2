@@ -39,6 +39,9 @@ Added Firebase database to the application, to give online persistence.
 
 CRUD functionality. App now has persistence and is now able to Create, Read, Update and Delete Issues.
 
+Visuals: 
+
 Added a Visual display which counts the total number of issues and the filtered number of issues.
 
-Added a number to the right of the custom made rating bar, to give a better visual clue to the value being selected.
+Added a number to the right of the custom made rating bar, in the Add Issue Screen and the Edit Issue Screen, to give a better visual clue to the value being selected.
+
