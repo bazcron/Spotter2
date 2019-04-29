@@ -45,3 +45,9 @@ Added a Visual display which counts the total number of issues and the filtered 
 
 Added a number to the right of the custom made rating bar, in the Add Issue Screen and the Edit Issue Screen, to give a better visual clue to the value being selected.
 
+Other Functionality: 
+
+Set App orientation fixed to Portrait.
+
+Created a new Icon, Changed the default app icon to the new icon.
+
