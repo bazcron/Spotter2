@@ -51,3 +51,4 @@ Set App orientation fixed to Portrait.
 
 Created a new Icon, Changed the default app icon to the new icon.
 
+Updated the County/Issue filter on home page.
