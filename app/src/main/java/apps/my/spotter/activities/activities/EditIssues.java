@@ -22,8 +22,9 @@ public class EditIssues extends Base {
     public Context context;
     public boolean isFavourite;
     public Issue aIssue;
+    private TextView ratingBarValue;
     public ImageView editFavourite;
-    
+    public RatingBar editRatingBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,8 +41,25 @@ public class EditIssues extends Base {
         ((TextView)findViewById(R.id.editNameOfIssue)).setText(aIssue.type);
         ((TextView)findViewById(R.id.editCountyName)).setText(aIssue.county);
         ((TextView)findViewById(R.id.editInfo)).setText(aIssue.info);
+        ratingBarValue = findViewById(R.id.editRatingBarValue);
+        editRatingBar = findViewById(R.id.editRatingBar);
 
-        ((RatingBar) findViewById(R.id.editRatingBar)).setRating((float)aIssue.rating);
+        editRatingBar.setRating((float)aIssue.rating);
+        //((RatingBar) findViewById(R.id.editRatingBar)).setRating((float)aIssue.rating);
+
+        int ratingValue =(int)((RatingBar) findViewById(R.id.editRatingBar)).getRating();
+        String ratingLevel2 = Integer.toString(ratingValue);
+        ratingBarValue.setText(ratingLevel2);
+
+        editRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                Float ratingLevelFloat = editRatingBar.getRating();
+                int ratingLevel = Math.round(ratingLevelFloat);
+                String ratingLevel2 = Integer.toString(ratingLevel);
+                ratingBarValue.setText(ratingLevel2);
+            }
+        });
     }
 
     private Issue getIssueObject(String id) {
